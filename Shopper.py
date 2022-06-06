@@ -26,14 +26,8 @@ time.sleep(20)  # in seconds
 element = driver.find_element_by_xpath('/html/body/div[1]/div[8]/div')
 html_content = element.get_attribute('outerHTML')
 
-#print(html_content)
-
 # Parsear o conteúdo HTML com o BeautifulSoup
-
 soup = BeautifulSoup(html_content, 'html.parser')
-
-print(soup.prettify())
-
 driver.quit()
 
 # Estruturar conteúdo em um Data Frame - Pandas
@@ -42,15 +36,6 @@ driver.quit()
 
 #print(df_full)
 
-#alimentos = soup.findAll("div", class_="sc-DJmSI kXVaHC")
+#alimentos = soup.findAll('p', class_="sc-DJmSI kXVaHC")
 
-#alimentos = soup.findAll("div", class_="sc-cZbDLb eFiuxn")
-
-#print(alimentos)
-
-
-
-#headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"}
-
-#site = requests.get(URL, headers=headers)
-
+print(alimentos)
