@@ -12,7 +12,7 @@ url = "https://programada.shopper.com.br/shop-cn/alimentos/"
 
 option = Options()
 option.headless = True
-driver = webdriver.Firefox()
+driver = webdriver.Firefox(options=option)
 
 driver.get(url)
 time.sleep(5)  # in seconds
