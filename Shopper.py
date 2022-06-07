@@ -29,7 +29,7 @@ html_content = element.get_attribute('outerHTML')
 # Parsear o conteúdo HTML com o BeautifulSoup
 soup = BeautifulSoup(html_content, 'html.parser')
 driver.quit()
-alimentos = soup.findAll('p', class_="sc-DJmSI kXVaHC")
+alimentos = soup.findAll('p', {'class': 'sc-DJmSI kXVaHC'})
 print(alimentos)
 
 # Estruturar conteúdo em um Data Frame - Pandas
